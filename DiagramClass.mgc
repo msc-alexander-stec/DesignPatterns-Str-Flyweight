@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ClassDiagram>
+    <Class name="pkg.flyweight.CoffeeContext" x="614" y="325">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="pkg.flyweight.CoffeeFactory" x="76" y="57">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association destinationClassName="pkg.flyweight.CoffeeImpl"
+            endpointName="flavors" kind="Simple"/>
+    </Class>
+    <Class name="pkg.flyweight.CoffeeImpl" x="238" y="216">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Extension destinationClassName="pkg.flyweight.ICoffee"/>
+    </Class>
+    <Class name="pkg.flyweight.ICoffee" x="235" y="98">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="testclient.TestClient" x="618" y="59">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association destinationClassName="pkg.flyweight.CoffeeContext"
+            endpointName="tables" kind="Simple"/>
+        <Association destinationClassName="pkg.flyweight.CoffeeFactory"
+            endpointName="coffeeFactory" kind="Simple"/>
+        <Association destinationClassName="pkg.flyweight.CoffeeImpl"
+            endpointName="coffees" kind="Simple"/>
+        <Communication destinationClassName="pkg.flyweight.CoffeeFactory"/>
+        <Communication destinationClassName="pkg.flyweight.CoffeeImpl"/>
+    </Class>
+</ClassDiagram>
